@@ -6,6 +6,14 @@ void main() {
     print('Pode tirar habilitação!');
   }
 
+  if (idade > 17) {
+    print('Pode tirar habilitação!');
+  }
+
+  if (idade >= 18) {
+    print('Pode tirar habilitação!');
+  }
+
   if (tipoPet != 'Cachorro') {
     print('Não temos nada para o seu pet!');
   }
