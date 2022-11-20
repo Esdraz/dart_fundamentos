@@ -20,10 +20,10 @@ void main() {
 
   //! Baseado no array acima monte um relatório onde:
   for (var paciente in pacientes) {
-    var dadosPaciente = paciente.split('|');
-    var pacienteIdade = int.tryParse(dadosPaciente[1]);
+    final dadosPaciente = paciente.split('|');
+    final pacienteIdade = int.tryParse(dadosPaciente[1]) ?? 0;
 
-    if (pacienteIdade! > 20) {
+    if (pacienteIdade > 20) {
       //! 1 - Apresente os pacientes com mais de 20 anos e print o nome deles
       print('Pacientes acima de 20 anos: ${dadosPaciente[0]}');
     }
@@ -44,9 +44,11 @@ void main() {
   }
 
   //! 2 - Apresente quantos pacientes existem para cada profissão (desenvolvedor, estudante, dentista, jornalista)
+  print('');
   print(
       'Profissões: Desenvolvedor - $contDev, Estudante - $contEstudante, Dentista - $contDentista, Jornalista - $contJornalista');
 
   //! 3 - Apresente a quantidade de pacientes que moram em SP
+  print('');
   print('Pacientes que moram em SP: $pacienteSP');
 }
